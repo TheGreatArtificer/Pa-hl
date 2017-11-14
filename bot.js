@@ -22,7 +22,7 @@ client.on('message', message => {
 
         args = args.splice(1);
 
-switch (cmd.toLowerCase())
+switch (cmd.toString().toLowerCase())
 {
     case 'hello':
         message.channel.send("(Pa'hl, unable to respond verbally, opens his mouth as if he were to squawk like a normal bird.)");
@@ -113,7 +113,15 @@ switch (cmd.toLowerCase())
             message.channel.send("```" + quotes[Math.floor(Math.random() * (quotes.length - 1 + 1) )] + ".```");
             break;
 
-}
+        case 'help' :
+        case 'h' :
+            message.author.send("```" + "Pa'hl opens his beak as if to squak,\n" +
+            "but instead of a squak, he lets out a tremendous REEEEEEE\n\n" +
+            "HELP FUNCTIONS DO NOT EXIST YET NORMIE REEEEEEEEEEEEEEEEE"+
+            "````");
+            break;
+
+        }
 
     }
 
